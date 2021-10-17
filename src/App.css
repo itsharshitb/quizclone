@@ -1,38 +1,29 @@
-.App {
+* {
+  margin: 0%;
+}
+.option {
+  background-color: #88a5db;
+  padding: 2rem;
+  font-style: italic;
+  font-size: large;
+}
+.question {
+  margin: 2rem;
+  background-color: dodgerblue;
+  padding: 2rem;
+  font-size: larger;
+  font-weight: bold;
+}
+.options {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   text-align: center;
+  cursor: pointer;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.correctAns {
+    background-color: chartreuse;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrongAns {
+    background-color: brown;
 }
