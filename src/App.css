@@ -21,9 +21,23 @@
   text-align: center;
   cursor: pointer;
 }
-.correctAns {
-    background-color: chartreuse;
-}
-.wrongAns {
+.answered {
     background-color: brown;
+}
+.nextButton {
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    size: 2rem;
+    margin: 2rem;
+}
+.result {
+    padding-top: 3rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: coral;
+    color: aliceblue;
+    border-radius: 2rem;
 }

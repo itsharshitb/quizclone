@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-function Option({ value, isCorrect, isAnswered, setIsAnswered }) {
-  const setAnswer = () => {
-    setIsAnswered(true);
-    // console.log(true);
+function Option({ value, isAnswered, setIsAnswered, setAlreadySelected }) {
+  const [selected, setSelected] = useState(false);
+
+  const setAnswer = (e) => {
+    if (!isAnswered) {
+      setSelected(true);
+      setIsAnswered(true);
+    }
+    else{
+        setSelected(false);
+        setIsAnswered(false);
+    }
   };
+
+  useEffect(() => {
+    setSelected(false);
+  }, [value])
+
   return (
     <div
       onClick={setAnswer}
-      className={`option ${isAnswered && isCorrect ? "correctAns" : ""}`}
+      className={`option ${selected ? "answered" : ""}`}
       dangerouslySetInnerHTML={{ __html: value }}
     ></div>
   );
